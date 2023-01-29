@@ -6,7 +6,13 @@ const config: CodegenConfig = {
   generates: {
     "src/generated/graphql.ts": {
       config: {
-        contextType: "@/context#Context"
+        mapperTypeSuffix: "Model",
+        contextType: "@/context#Context",
+        useIndexSignature: true,
+        mappers: {
+          Post: "@prisma/client/index#Post",
+          User: "@prisma/client/index#User"
+        }
       },
       plugins: ["typescript", "typescript-resolvers"],
     },

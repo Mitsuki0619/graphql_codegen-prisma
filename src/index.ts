@@ -7,7 +7,7 @@ import { resolvers } from "./graphql/resolvers";
 import { createContext } from "../context";
 
 (async () => {
-  const typeDefs = readFileSync("./graphql/schema/schema.graphql", {
+  const typeDefs = readFileSync("./src/graphql/schema/schema.graphql", {
     encoding: "utf8",
   });
 

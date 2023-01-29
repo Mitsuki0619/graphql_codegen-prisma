@@ -1,10 +1,10 @@
 import { QueryResolvers } from "../../../generated/graphql";
+import { getAllPosts } from "./getAllPosts";
+import { getPostDetail } from "./getPostDetail";
+import { getUser } from "./getUser";
 
 export const Query: QueryResolvers = {
-  /**
-   * 全ポスト取得
-   */
-  allPosts: async(_parent, _args, ctx) => {
-    return ctx.prisma.post.findMany();
-  },
+  getAllPosts,
+  getUser,
+  getPostDetail
 };

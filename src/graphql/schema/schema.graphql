@@ -1,5 +1,5 @@
 type User {
-  id: String!
+  id: Int!
   email: String!
   name: String
   posts: [Post]
@@ -7,23 +7,21 @@ type User {
 
 type Post {
   id: Int!
+  title: String!
   content: String!
-  userId: String!
-  user: User!
-  createdAt: String!
-  updatedAt: String!
+  authorId: String!
+  author: User!
 }
 
 type Query {
-  allPosts: [Post]!
-  userPosts(userId: String!): [Post]!
-  postDetail(postId: Int!): Post!
-  searchPosts(word: String!): [Post]!
+  getAllPosts: [Post!]!
+  getUser(authorId: Int!): User!
+  getPostDetail(postId: Int!): Post!
 }
 
 type Mutation {
   createUser(name: String!, email: String!): User!
-  createPost(content: String!, userId: String!): Post!
-  updatePost(id: String!, content: String!): Post!
-  deletePost(id: String!): Post!
+  createPost(title: String!, content: String!, authorId: Int!): Post!
+  updatePost(id: Int!, title: String!, content: String!): Post!
+  deletePost(id: Int!): Post!
 }
