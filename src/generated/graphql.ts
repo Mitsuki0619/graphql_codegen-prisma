@@ -72,7 +72,7 @@ export type QueryGetPostDetailArgs = {
 
 
 export type QueryGetUserArgs = {
-  authorId: Scalars['Int'];
+  userId: Scalars['Int'];
 };
 
 export type User = {
@@ -191,7 +191,7 @@ export type PostResolvers<ContextType = Context, ParentType extends ResolversPar
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   getAllPosts?: Resolver<Array<ResolversTypes['Post']>, ParentType, ContextType>;
   getPostDetail?: Resolver<ResolversTypes['Post'], ParentType, ContextType, RequireFields<QueryGetPostDetailArgs, 'postId'>>;
-  getUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<QueryGetUserArgs, 'authorId'>>;
+  getUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<QueryGetUserArgs, 'userId'>>;
 };
 
 export type UserResolvers<ContextType = Context, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {

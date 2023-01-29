@@ -1,4 +1,4 @@
-import { QueryResolvers } from "@/src/generated/graphql";
+import { QueryResolvers } from "@Generated/graphql";
 
 export const getAllPosts: QueryResolvers["getAllPosts"] = async (
   _parent,
@@ -7,7 +7,7 @@ export const getAllPosts: QueryResolvers["getAllPosts"] = async (
 ) => {
   return ctx.prisma.post.findMany({
     include: {
-      author: true
-    }
+      author: true,
+    },
   });
 };

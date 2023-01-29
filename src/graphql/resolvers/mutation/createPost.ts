@@ -1,4 +1,4 @@
-import { MutationResolvers } from "@/src/generated/graphql";
+import { MutationResolvers } from "@Generated/graphql";
 
 export const createPost: MutationResolvers["createPost"] = (
   _parent,

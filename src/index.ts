@@ -3,8 +3,8 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { readFileSync } from "fs";
-import { resolvers } from "./graphql/resolvers";
-import { createContext } from "../context";
+import { createContext } from "@/context";
+import { resolvers } from "@GraphQL/resolvers";
 
 (async () => {
   const typeDefs = readFileSync("./src/graphql/schema/schema.graphql", {

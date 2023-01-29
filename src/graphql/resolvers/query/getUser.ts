@@ -1,16 +1,16 @@
-import { QueryResolvers } from "@/src/generated/graphql";
+import { QueryResolvers } from "@Generated/graphql";
 
 export const getUser: QueryResolvers["getUser"] = (
   _parent,
-  { authorId },
+  { userId },
   ctx
 ) => {
   return ctx.prisma.user.findUnique({
     where: {
-      id: authorId,
+      id: userId,
     },
     include: {
-      posts: true
-    }
+      posts: true,
+    },
   });
 };

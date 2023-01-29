@@ -1,4 +1,4 @@
-import { QueryResolvers } from "@/src/generated/graphql";
+import { QueryResolvers } from "@Generated/graphql";
 
 export const getPostDetail: QueryResolvers["getPostDetail"] = (
   _parent,
@@ -10,7 +10,7 @@ export const getPostDetail: QueryResolvers["getPostDetail"] = (
       id: postId,
     },
     include: {
-      author: true
-    }
+      author: true,
+    },
   });
 };

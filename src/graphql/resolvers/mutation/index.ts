@@ -1,9 +1,8 @@
-import { MutationResolvers } from "@/src/generated/graphql";
-import { createPost } from "./createPost";
-import { createUser } from "./createUser";
-
+import { MutationResolvers } from "@Generated/graphql";
+import { createPost } from "@Mutation/createPost";
+import { createUser } from "@Mutation/createUser";
 
 export const Mutation: MutationResolvers = {
   createPost,
-  createUser
+  createUser,
 };

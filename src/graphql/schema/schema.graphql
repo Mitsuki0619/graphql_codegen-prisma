@@ -15,7 +15,7 @@ type Post {
 
 type Query {
   getAllPosts: [Post!]!
-  getUser(authorId: Int!): User!
+  getUser(userId: Int!): User!
   getPostDetail(postId: Int!): Post!
 }
 
