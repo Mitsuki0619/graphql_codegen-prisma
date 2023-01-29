@@ -6,7 +6,9 @@
   "scripts": {
     "start": "ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "graphql-codegen --config codegen.ts"
+    "generate": "graphql-codegen --config codegen.ts",
+    "prisma-init": "prisma migrate dev --name init",
+    "prisma-reset": "prisma migrate reset"
   },
   "keywords": [],
   "author": "",

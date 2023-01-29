@@ -8,7 +8,6 @@ const config: CodegenConfig = {
       config: {
         mapperTypeSuffix: "Model",
         contextType: "@/context#Context",
-        useIndexSignature: true,
         mappers: {
           Post: "@prisma/client/index#Post",
           User: "@prisma/client/index#User"
